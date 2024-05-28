@@ -1,0 +1,9 @@
+# @see https://dev.to/deadlybyte/please-add-gitattributes-to-your-git-repository-1jld
+# @see https://rehansaeed.com/gitattributes-best-practices
+# @see https://github.com/gitattributes/gitattributes
+# Auto detect text files and perform LF normalization
+* text=auto
+public/WebsiteMaterial/Videos/improvideo2.mp4 filter=lfs diff=lfs merge=lfs -text
+public/WebsiteMaterial/Videos/nhandang3.mp4 filter=lfs diff=lfs merge=lfs -text
+public/WebsiteMaterial/Videos/improvideo1.mp4 filter=lfs diff=lfs merge=lfs -text
+public/WebsiteMaterial/Videos/VMS_system.mp4 filter=lfs diff=lfs merge=lfs -text
