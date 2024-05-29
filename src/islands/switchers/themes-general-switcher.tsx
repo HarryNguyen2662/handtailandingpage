@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { Laptop, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -24,10 +23,6 @@ export function ThemesGeneralSwitcher({
   ...props
 }: ThemesGeneralSwitcherProps) {
   const { setTheme } = useTheme();
-  useEffect(() => {
-    setTheme("light");
-  }, [setTheme]);
-
   const client = useIsClient();
 
   if (!client)
