@@ -15,7 +15,7 @@ import { CartSheet } from "~/islands/checkout/cart-sheet";
 import { Combobox } from "~/islands/navigation/combobox";
 import { MainMenu } from "~/islands/navigation/main-menu";
 import { MobileMenu } from "~/islands/navigation/mobile-menu";
-import ThemesGeneralSwitcher from "~/islands/switchers/themes-general-switcher";
+import { ThemesGeneralSwitcher } from "~/islands/switchers/themes-general-switcher";
 import { Link } from "~/navigation";
 import { dashboardConfig } from "~/server/config/dashboard";
 import { getCurrentUser } from "~/utils/auth/users";
