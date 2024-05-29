@@ -80,7 +80,6 @@ export async function SiteHeader({
             MainMenuItems={siteConfig.mainNav}
             sidebarNavItems={dashboardConfig.sidebarNav}
           />
-
           {/*<CartSheet />
 
           <Combobox
@@ -91,6 +90,8 @@ export async function SiteHeader({
             tCmdDark={t("islands.command.dark")}
             tCmdSystem={t("islands.command.system")}
           />}
+
+          {/*settings.themeToggleEnabled && <ThemesGeneralSwitcher />*/}
 
           {/* {env.DEV_DEMO_NOTES === "true" && ( */}
           {/*<div className="hidden sm:block">

@@ -24,13 +24,15 @@ export function UserProfileClerk() {
 
   // Determine the base theme based on the current theme or system preference
   const baseTheme =
-    theme === "light" ? neobrutalism
-    : theme === "dark" ? dark
-    : theme === "system" ?
-      resolvedTheme === "dark" ?
-        dark
-      : neobrutalism
-    : appearance.baseTheme;
+    theme === "light"
+      ? neobrutalism
+      : theme === "dark"
+        ? dark
+        : theme === "system"
+          ? resolvedTheme === "dark"
+            ? dark
+            : neobrutalism
+          : appearance.baseTheme;
 
   return (
     <ClerkUserProfile
@@ -39,13 +41,7 @@ export function UserProfileClerk() {
         baseTheme,
         variables: {
           ...appearance.variables,
-          colorBackground:
-            (
-              theme === "light" ||
-              (theme === "system" && resolvedTheme === "light")
-            ) ?
-              "#fafafa"
-            : undefined,
+          colorBackground: "#fafafa",
         },
       }}
     />
