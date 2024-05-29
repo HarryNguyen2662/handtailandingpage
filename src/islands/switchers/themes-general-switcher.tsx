@@ -24,9 +24,6 @@ export function ThemesGeneralSwitcher({
 }: ThemesGeneralSwitcherProps) {
   const { setTheme } = useTheme();
   setTheme("light");
-  const client = useIsClient();
-
-  if (!client) return <></>;
 
   return <></>;
 }

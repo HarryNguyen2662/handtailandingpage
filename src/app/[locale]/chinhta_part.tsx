@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player";
 
 function Nhandang_part() {
+  const [valuevideo, setValuevideo] = useState(true);
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
@@ -64,8 +65,9 @@ function Nhandang_part() {
             url="../WebsiteMaterial/Videos/Vnspellchecker_video.mp4"
             width="820"
             height="480"
-            playing={true}
+            playing={valuevideo}
             loop={true}
+            muted={true}
             controls={false}
             playbackRate={2}
           />

@@ -4,6 +4,9 @@
  */
 
 import type { Metadata } from "next";
+import { useRouter } from "next/navigation";
+import { int } from "drizzle-orm/mysql-core";
+import { integer } from "drizzle-orm/pg-core";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Balancer } from "react-wrap-balancer";
@@ -13,6 +16,7 @@ import { HeroSection } from "~/islands/marketing/hero-section";
 import { SiteFooter } from "~/islands/navigation/site-footer";
 import { SiteHeader } from "~/islands/navigation/site-header";
 import { GeneralShell } from "~/islands/wrappers/general-shell";
+import { redirect } from "~/navigation";
 
 import Chinhta_part from "./chinhta_part";
 import Didong_part from "./didong_part";
@@ -28,7 +32,6 @@ export async function generateMetadata({ params }) {
   };
   return metadata;
 }
-
 export default function HomePage() {
   // useTranslations works both on the server and client
   // we only need the getTranslations on async components
