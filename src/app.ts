@@ -77,7 +77,7 @@ export const TRIAL_LENGTH_IN_DAYS = 7;
 export const ROLES = [OWNER_ROLE, ADMIN_ROLE, MEMBER_ROLE] as const;
 
 export const settings = {
-  themeToggleEnabled: false,
+  themeToggleEnabled: true,
 };
 
 export const siteConfig = {
