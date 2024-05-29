@@ -97,15 +97,7 @@ export function MobileMenu({
                   <div className="flex flex-col space-y-2">
                     {sidebarNavItems?.map((item, index) =>
                       item.href ? (
-                        <MobileLink
-                          key={index}
-                          href={String(item.href)}
-                          pathname={pathname}
-                          setIsOpen={setIsOpen}
-                          disabled={item.disabled}
-                        >
-                          {item.title}
-                        </MobileLink>
+                        <></>
                       ) : (
                         <div
                           key={index}
