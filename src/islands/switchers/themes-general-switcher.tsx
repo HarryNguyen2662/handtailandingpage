@@ -25,51 +25,8 @@ export function ThemesGeneralSwitcher({
   const { setTheme } = useTheme();
   const client = useIsClient();
 
-  if (!client)
-    return (
-      <Button
-        disabled
-        aria-label="Theme Switcher"
-        className="h-9 w-9 rounded-lg border"
-        variant="ghost"
-        size="icon"
-        {...props}
-      >
-        <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100" />
-      </Button>
-    );
+  if (!client) setTheme("light");
+  else setTheme("light");
 
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          aria-label="Theme Switcher"
-          className="h-9 w-9 rounded-lg border"
-          variant="ghost"
-          size="icon"
-          {...props}
-        >
-          <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem className="font-heading">Theme</DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Moon aria-hidden="true" className={iconClassName} />
-          <span>Dark</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          <Sun aria-hidden="true" className={iconClassName} />
-          <span>Light</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Laptop aria-hidden="true" className={iconClassName} />
-          <span>System</span>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
+  return setTheme("light");
 }
