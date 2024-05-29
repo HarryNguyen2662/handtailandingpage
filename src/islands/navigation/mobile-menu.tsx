@@ -58,57 +58,43 @@ export function MobileMenu({
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="pl-1 pr-7">
             <Accordion type="single" collapsible className="w-full">
-              {MainMenuItems?.map((item, index) => (
+              {/*MainMenuItems?.map((item, index) => (
                 <AccordionItem value={item.title} key={index}>
                   <AccordionTrigger className="text-sm capitalize">
                     {item.title}
                   </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="flex flex-col space-y-2">
-                      {item.items?.map((subItem, index) =>
-                        subItem.href ? (
-                          <MobileLink
-                            key={index}
-                            href={String(subItem.href)}
-                            pathname={pathname}
-                            setIsOpen={setIsOpen}
-                            disabled={subItem.disabled}
-                          >
-                            {subItem.title}
-                          </MobileLink>
-                        ) : (
-                          <div
-                            key={index}
-                            className="text-foreground/70 transition-colors"
-                          >
-                            {item.title}
-                          </div>
-                        ),
-                      )}
-                    </div>
-                  </AccordionContent>
                 </AccordionItem>
-              ))}
-              <AccordionItem value="sidebar">
-                <AccordionTrigger className="text-sm">
-                  Sidebar Menu
+              ))*/}
+              <Link href="/mophong120" legacyBehavior passHref>
+                <AccordionItem value={"Trang Chủ"} key={0}>
+                  <AccordionTrigger className="text-sm capitalize">
+                    {"Trang Chủ"}
+                  </AccordionTrigger>
+                </AccordionItem>
+              </Link>
+              <Link href="/mophong120" legacyBehavior passHref>
+                <AccordionItem value={"Sản Phẩm"} key={1}>
+                  <AccordionTrigger className="text-sm capitalize">
+                    {"Sản Phẩm"}
+                  </AccordionTrigger>
+                </AccordionItem>
+              </Link>
+              <AccordionItem value={"Đào Tạo"} key={2}>
+                <AccordionTrigger className="text-sm capitalize">
+                  {"Đào Tạo"}
                 </AccordionTrigger>
-                <AccordionContent>
-                  <div className="flex flex-col space-y-2">
-                    {sidebarNavItems?.map((item, index) =>
-                      item.href ? (
-                        <></>
-                      ) : (
-                        <div
-                          key={index}
-                          className="text-foreground/70 transition-colors"
-                        >
-                          {item.title}
-                        </div>
-                      ),
-                    )}
-                  </div>
-                </AccordionContent>
+              </AccordionItem>
+              <Link href="/gioithieu" legacyBehavior passHref>
+                <AccordionItem value={"Giới Thiệu"} key={3}>
+                  <AccordionTrigger className="text-sm capitalize">
+                    {"Giới Thiệu"}
+                  </AccordionTrigger>
+                </AccordionItem>
+              </Link>
+              <AccordionItem value={"Liên Hệ"} key={4}>
+                <AccordionTrigger className="text-sm capitalize">
+                  {"Liên Hệ"}
+                </AccordionTrigger>
               </AccordionItem>
             </Accordion>
           </div>
