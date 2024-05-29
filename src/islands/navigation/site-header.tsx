@@ -77,6 +77,10 @@ export async function SiteHeader({
         <div className="flex flex-1 items-center justify-end space-x-2">
           <MainMenu items={siteConfig.mainNav} />
 
+          <MobileMenu
+            MainMenuItems={siteConfig.mainNav}
+            sidebarNavItems={dashboardConfig.sidebarNav}
+          />
           <ThemesGeneralSwitcher />
           {/*<CartSheet />
 
