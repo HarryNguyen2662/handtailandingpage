@@ -23,10 +23,10 @@ export function ThemesGeneralSwitcher({
   ...props
 }: ThemesGeneralSwitcherProps) {
   const { setTheme } = useTheme();
+  setTheme("light");
   const client = useIsClient();
 
-  if (!client) setTheme("light");
-  else setTheme("light");
+  if (!client) return <></>;
 
-  return setTheme("light");
+  return <></>;
 }
