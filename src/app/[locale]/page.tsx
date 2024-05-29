@@ -9,7 +9,6 @@ import { getTranslations } from "next-intl/server";
 import { Balancer } from "react-wrap-balancer";
 
 import { siteConfig } from "~/app";
-import { FeaturedStoreItems } from "~/islands/commerce/featured-store-items";
 import { HeroSection } from "~/islands/marketing/hero-section";
 import { SiteFooter } from "~/islands/navigation/site-footer";
 import { SiteHeader } from "~/islands/navigation/site-header";
