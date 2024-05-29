@@ -6,6 +6,7 @@ import LocalizationMainSwitcher from "~/localization-main";
 import { ActivitySquare, Github } from "lucide-react";
 import { type Session } from "next-auth";
 import { getTranslations } from "next-intl/server";
+import { useTheme } from "next-themes";
 import { tv, type VariantProps } from "tailwind-variants";
 
 import { settings, siteConfig } from "~/app";
@@ -15,6 +16,7 @@ import { CartSheet } from "~/islands/checkout/cart-sheet";
 import { Combobox } from "~/islands/navigation/combobox";
 import { MainMenu } from "~/islands/navigation/main-menu";
 import { MobileMenu } from "~/islands/navigation/mobile-menu";
+import { ThemesGeneralSwitcher } from "~/islands/switchers/themes-general-switcher";
 import { Link } from "~/navigation";
 import { dashboardConfig } from "~/server/config/dashboard";
 import { getCurrentUser } from "~/utils/auth/users";
@@ -37,6 +39,7 @@ const NavbarStyles = tv({
     },
   },
 });
+const { setTheme } = useTheme();
 
 export type SiteHeaderProps = {
   session?: Session | null;
@@ -55,9 +58,12 @@ export async function SiteHeader({
 
   if (authProvider === "clerk") {
     session = await currentUser();
+    setTheme("light");
   } else if (authProvider === "authjs") {
     session = await getCurrentUser();
+    setTheme("light");
   } else {
+    setTheme("light");
     throw new Error("❌ [SiteHeader] NEXT_PUBLIC_AUTH_PROVIDER is invalid");
   }
 
@@ -90,8 +96,6 @@ export async function SiteHeader({
             tCmdDark={t("islands.command.dark")}
             tCmdSystem={t("islands.command.system")}
           />}
-
-          {/*settings.themeToggleEnabled && <ThemesGeneralSwitcher />*/}
 
           {/* {env.DEV_DEMO_NOTES === "true" && ( */}
           {/*<div className="hidden sm:block">
