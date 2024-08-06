@@ -64,7 +64,7 @@ export function MainMenu({ items }: MainMenuProps) {
               <NavigationMenuContent />
             </NavigationMenuItem>
           </Link>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/lienhe" legacyBehavior passHref>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="h-auto">
                 Liên Hệ

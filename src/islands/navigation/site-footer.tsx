@@ -113,11 +113,7 @@ export async function SiteFooter() {
             >
               <div className="block text-sm text-muted-foreground sm:text-center">
                 © {new Date().getFullYear()}{" "}
-                <Link
-                  target="_blank"
-                  href="https://github.com/blefnk/relivator"
-                  className="hover:underline"
-                >
+                <Link target="_blank" href="/" className="hover:underline">
                   {siteConfig.company.name}
                 </Link>
                 . All Rights Reserved.

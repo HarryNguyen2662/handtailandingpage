@@ -134,7 +134,7 @@ export const productCategories = [
   },
   {
     title: "Liên Hệ",
-    image: "/",
+    image: "/lienhe",
     subcategories: [
       {
         title: "Skate Tools",
